@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai3</title>
+</head>
+<body>
+<script>
+    let year = parseFloat(prompt("Nhập số năm sinh của bạn vào đây !"));
+
+    function tinhTuoi(yearOfbirth) {
+        var yearNow = new Date();
+
+        if (yearOfbirth > yearNow.getFullYear()) {
+            return false;
+        } else {
+            let yearOld = yearNow.getFullYear() - yearOfbirth;
+            return yearOld;
+        }
+
+
+    }
+
+    if (tinhTuoi(year) == false) {
+        document.write("Sorry ! Số năm lớn hơn hiện tại ! Vui lòng nhập lại năm sinh !!! :( ");
+    } else {
+        document.write("Số tuổi của bạn là :   " + tinhTuoi(year) + " tuổi :) ");
+    }
+</script>
+</body>
+</html>

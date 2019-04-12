@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai4</title>
+</head>
+<body>
+
+
+<button type="button" id="btnPrint">Ketqua</button>
+<script>
+    let number = parseFloat(prompt("Nhập số vào ô trống"));
+    let sum = 0;
+
+    function SoTruyenVao(numberone) {
+        sum = numberone + 1;
+        return sum;
+
+    }
+
+    document.getElementById("btnPrint").innerHTML = ("Kết quả là:   " + SoTruyenVao(number));
+
+
+</script>
+</body>
+</html>

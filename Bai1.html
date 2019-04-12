@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai1</title>
+</head>
+<body>
+<input type="text" id="txtInput" placeholder="Nhap vao o trong" size="50px">
+<button type="button" id="btnPrint" onclick="printOne()">Print all prime numbers</button>
+<script>
+
+    let count = 0;
+
+    function checkSoNguyenTo(number) {
+        if (number < 2) {
+            return false;
+        } else {
+            for (let i = 2; i < number; i++) {
+                if (number % i == 0) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
+    function printOne() {
+        let n = parseFloat(document.getElementById("txtInput").value);
+        let j = 2;
+        while (count < n) {
+            if ((checkSoNguyenTo(j) == true)) {
+                document.write("  " + j);
+                count++;
+            }
+            console.log(checkSoNguyenTo(j));
+            j++;
+        }
+
+    }
+</script>
+</body>
+</html>
